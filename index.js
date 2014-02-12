@@ -169,6 +169,32 @@ function createModel(name, db, _fields){
     debug('%s deleted', name);
   };
 
+  /**
+   * Inspect implementation.
+   *
+   * @api public
+   */
+
+  Model.prototype.inspect = function(){
+    return this.toJSON();
+  };
+  
+  /**
+   * Convert a record to JSON.
+   *
+   * @return {Object}
+   * @api public
+   */
+  
+  Model.prototype.toJSON = function(){
+    var data = this._data;
+    var ret = {};
+    fields.forEach(function(field){
+      ret[field.key] = data[field.key];
+    });
+    return ret;
+  };
+
   // Static methods
 
   fields.forEach(function(field){

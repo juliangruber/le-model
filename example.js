@@ -28,4 +28,6 @@ co(function*(){
   var user = yield User.byName('julian');
   console.log('user created at: %s', user.createdAt);
 
+  console.log(user);
+
 })();
