@@ -234,11 +234,17 @@ function createModel(name, db, _fields){
        * @param {Object} value
        * @return {Array[Model]}
        * @api public
+       * @todo co-stream
        */
 
       Model[fn] = function*(value){
-        var values = yield db.values(join(name, field.key, '*'));
-        return values.map(Model);
+        var ids = yield db.values(join(name, field.key, '*'));
+
+        return yield ids.map(function(id){
+          return function*(){
+            return Model(yield db.get(join(name, 'id', id)));
+          };
+        });
       };
 
     }
