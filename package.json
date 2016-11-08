@@ -6,11 +6,11 @@
   "license": "MIT",
   "dependencies": {
     "uid2": "0.0.3",
-    "debug": "~0.7.4"
+    "debug": "~2.3.0"
   },
   "devDependencies": {
-    "co": "~3.0.2",
+    "co": "~4.6.0",
     "le": "0.0.0",
-    "rimraf": "~2.2.6"
+    "rimraf": "~2.5.4"
   }
 }
