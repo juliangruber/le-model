@@ -11,6 +11,6 @@
   "devDependencies": {
     "co": "~4.6.0",
     "le": "0.0.0",
-    "rimraf": "~2.6.0"
+    "rimraf": "~2.6.1"
   }
 }
