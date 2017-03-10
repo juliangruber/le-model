@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "uid2": "0.0.3",
-    "debug": "~2.3.0"
+    "debug": "~2.6.2"
   },
   "devDependencies": {
     "co": "~4.6.0",
